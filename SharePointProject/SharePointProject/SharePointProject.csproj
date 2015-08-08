@@ -76,6 +76,7 @@
       <DependentUpon>WebFeature.feature</DependentUpon>
     </Content>
     <Content Include="PagesModule\Elements.xml" />
+    <Content Include="PagesModule\FullWebPartPage.aspx" />
     <Content Include="PagesModule\Page1.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

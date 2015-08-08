@@ -2,5 +2,16 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="PagesModule">
     <File Path="PagesModule\Page1.aspx" Url="Page1.aspx" />
+    <File Path="PagesModule\FullWebPartPage.aspx" Url="FullWebPartPage.aspx">
+      <AllUsersWebPart WebPartZoneID="FullPage" WebPartOrder="0">
+        <![CDATA[
+         <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Assembly>Microsoft.SharePoint, Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+          <Title>My content editor web part</Title>
+        </WebPart>
+        ]]>
+      </AllUsersWebPart>
+    </File>
   </Module>
 </Elements>

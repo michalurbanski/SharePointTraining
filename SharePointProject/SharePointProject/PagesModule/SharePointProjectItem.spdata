@@ -3,5 +3,6 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="PagesModule\" Type="ElementManifest" />
     <ProjectItemFile Source="Page1.aspx" Target="PagesModule\" Type="ElementFile" />
+    <ProjectItemFile Source="FullWebPartPage.aspx" Target="PagesModule\" Type="ElementFile" />
   </Files>
 </ProjectItem>
