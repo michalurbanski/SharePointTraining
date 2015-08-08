@@ -66,12 +66,17 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="PagesModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7368bda9-155e-44ff-8147-a935cff3c81f}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="Features\WebFeature\WebFeature.Template.xml">
       <DependentUpon>WebFeature.feature</DependentUpon>
     </Content>
+    <Content Include="PagesModule\Elements.xml" />
+    <Content Include="PagesModule\Page1.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
