@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="MasterPage" Url="_catalogs/masterpage">
+    <File Path="MasterPage\custom.master" Url="custom.master" Type="GhostableInLibrary">
+      <Property Name="UIVersion" Value="4"></Property>
+      <Property Name="ContentTypeId" Value="0x010105"></Property>
+    </File>
+  </Module>
+</Elements>

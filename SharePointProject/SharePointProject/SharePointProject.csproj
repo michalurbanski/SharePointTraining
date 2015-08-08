@@ -60,6 +60,10 @@
       <FeatureId>{5808e912-12bb-4523-bc75-d99e0db6a026}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="MasterPage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b9d22c36-1a26-41e0-ab5f-2866c89e4fd2}</SharePointProjectItemId>
+    </None>
+    <None Include="MasterPage\custom.master" />
     <None Include="Package\Package.package">
       <PackageId>{0d7b8bf2-55f2-41ef-ab02-d5b2664667ba}</PackageId>
     </None>
@@ -75,6 +79,7 @@
     <Content Include="Features\WebFeature\WebFeature.Template.xml">
       <DependentUpon>WebFeature.feature</DependentUpon>
     </Content>
+    <Content Include="MasterPage\Elements.xml" />
     <Content Include="PagesModule\Elements.xml" />
     <Content Include="PagesModule\FullWebPartPage.aspx" />
     <Content Include="PagesModule\Page1.aspx" />
