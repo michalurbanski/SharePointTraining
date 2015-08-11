@@ -49,6 +49,7 @@
     <Reference Include="Microsoft.SharePoint" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildSiteInit\ChildSiteInit.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="WebFeatureActivation.cs" />
     <Compile Include="Features\SiteFeature\SiteFeature.EventReceiver.cs">
@@ -61,6 +62,9 @@
     <Compile Include="SiteFeatureActivation.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ChildSiteInit\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{33007b9a-155b-4cf4-aa2c-647425a94cf8}</SharePointProjectItemId>
+    </None>
     <None Include="Features\SiteFeature\SiteFeature.feature">
       <FeatureId>{c75849e6-2af7-45cb-b4f2-cda97a381843}</FeatureId>
     </None>
@@ -87,6 +91,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ChildSiteInit\Elements.xml" />
     <Content Include="Features\SiteFeature\SiteFeature.Template.xml">
       <DependentUpon>SiteFeature.feature</DependentUpon>
     </Content>
