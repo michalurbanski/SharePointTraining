@@ -49,13 +49,20 @@
     <Reference Include="Microsoft.SharePoint" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeatureActivation.cs" />
+    <Compile Include="WebFeatureActivation.cs" />
+    <Compile Include="Features\SiteFeature\SiteFeature.EventReceiver.cs">
+      <DependentUpon>SiteFeature.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\WebFeature\WebFeature.EventReceiver.cs">
       <DependentUpon>WebFeature.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteFeatureActivation.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\SiteFeature\SiteFeature.feature">
+      <FeatureId>{c75849e6-2af7-45cb-b4f2-cda97a381843}</FeatureId>
+    </None>
     <None Include="Features\WebFeature\WebFeature.feature">
       <FeatureId>{5808e912-12bb-4523-bc75-d99e0db6a026}</FeatureId>
     </None>
@@ -73,9 +80,15 @@
     <None Include="PagesModule\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7368bda9-155e-44ff-8147-a935cff3c81f}</SharePointProjectItemId>
     </None>
+    <None Include="Style Library\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cd3b7a2f-4e78-44cc-98c3-06e79b4241d3}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Features\SiteFeature\SiteFeature.Template.xml">
+      <DependentUpon>SiteFeature.feature</DependentUpon>
+    </Content>
     <Content Include="Features\WebFeature\WebFeature.Template.xml">
       <DependentUpon>WebFeature.feature</DependentUpon>
     </Content>
@@ -83,6 +96,8 @@
     <Content Include="PagesModule\Elements.xml" />
     <Content Include="PagesModule\FullWebPartPage.aspx" />
     <Content Include="PagesModule\Page1.aspx" />
+    <Content Include="Style Library\custom.css" />
+    <Content Include="Style Library\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

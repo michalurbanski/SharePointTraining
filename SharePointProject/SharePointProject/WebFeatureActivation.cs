@@ -11,7 +11,7 @@ namespace SharePointProject
     /// <summary>
     /// Actions performed during feature activation
     /// </summary>
-    internal class FeatureActivation
+    internal class WebFeatureActivation
     {
         public void CreateWebPartPage(SPWeb web, string pageFileName, string templateFileName)
         {
@@ -32,5 +32,7 @@ namespace SharePointProject
 
             file.CopyTo(destinationFileName, true);
         }
+
+        
     }
 }

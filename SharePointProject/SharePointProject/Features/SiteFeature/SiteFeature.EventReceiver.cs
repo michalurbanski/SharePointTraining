@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using Microsoft.SharePoint;
 
-namespace SharePointProject.Features.WebFeature
+namespace SharePointProject.Features.SiteFeature
 {
     /// <summary>
     /// This class handles events raised during feature activation, deactivation, installation, uninstallation, and upgrade.
@@ -12,28 +12,23 @@ namespace SharePointProject.Features.WebFeature
     /// The GUID attached to this class may be used during packaging and should not be modified.
     /// </remarks>
 
-    [Guid("3c98fd33-4f90-48bc-b82d-bd0d87ecf34b")]
-    public class WebFeatureEventReceiver : SPFeatureReceiver
+    [Guid("75367ac3-9f91-4543-addf-0cc385c4d0c7")]
+    public class SiteFeatureEventReceiver : SPFeatureReceiver
     {
         // Uncomment the method below to handle the event raised after a feature has been activated.
 
         public override void FeatureActivated(SPFeatureReceiverProperties properties)
         {
-            SPWeb web = properties.Feature.Parent as SPWeb; 
-            
-            WebFeatureActivation featureActivation = new WebFeatureActivation();
-            featureActivation.CreateWebPartPage(web, "newPage.aspx", "spstd1.aspx");
-
-            featureActivation.CopySitePage(web, "newPage.aspx", "newPageCopy.aspx");
 
         }
 
 
-        // Uncomment the method below to handle the event raised before a feature is deactivated.
+        //Uncomment the method below to handle the event raised before a feature is deactivated.
 
-        //public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
-        //{
-        //}
+        public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
+        {
+
+        }
 
 
         // Uncomment the method below to handle the event raised after a feature has been installed.
