@@ -49,6 +49,7 @@
     <Reference Include="Microsoft.SharePoint" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="WebFeatureActivation.cs" />
     <Compile Include="Features\SiteFeature\SiteFeature.EventReceiver.cs">
       <DependentUpon>SiteFeature.feature</DependentUpon>

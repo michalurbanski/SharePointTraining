@@ -2,6 +2,8 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using Microsoft.SharePoint;
+using System.Diagnostics;
+using SharePointProject.Helpers;
 
 namespace SharePointProject.Features.SiteFeature
 {
@@ -15,11 +17,15 @@ namespace SharePointProject.Features.SiteFeature
     [Guid("75367ac3-9f91-4543-addf-0cc385c4d0c7")]
     public class SiteFeatureEventReceiver : SPFeatureReceiver
     {
+        private SiteFeatureActivation _featureActivation = new SiteFeatureActivation(); 
+        
+
         // Uncomment the method below to handle the event raised after a feature has been activated.
 
         public override void FeatureActivated(SPFeatureReceiverProperties properties)
         {
-
+            SPSite site = _featureActivation.GetValidatedSiteInFeature(properties);
+            _featureActivation.SetCustomBranding(site.AllWebs, UrlHelper.GetSiteRelativeUrl(site));
         }
 
 
@@ -27,7 +33,8 @@ namespace SharePointProject.Features.SiteFeature
 
         public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
         {
-
+            SPSite site = _featureActivation.GetValidatedSiteInFeature(properties);
+            _featureActivation.RevertToOriginalBranding(site.AllWebs, UrlHelper.GetSiteRelativeUrl(site));
         }
 
 

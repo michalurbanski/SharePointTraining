@@ -1,4 +1,4 @@
-﻿.ms-cui-topBar2
+﻿body #s4-ribbonrow /* ribbon background color */
 {
-    color: greenyellow; 
+    background-color: blue; 
 }
