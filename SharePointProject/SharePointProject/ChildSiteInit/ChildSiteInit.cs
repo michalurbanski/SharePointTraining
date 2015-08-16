@@ -3,6 +3,7 @@ using System.Security.Permissions;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Utilities;
 using Microsoft.SharePoint.Workflow;
+using System.Diagnostics;
 
 namespace SharePointProject.ChildSiteInit
 {
@@ -18,14 +19,14 @@ namespace SharePointProject.ChildSiteInit
         {
             //base.WebProvisioned(properties);
 
-            SPWeb web = properties.Web; 
+            SPWeb web = properties.Web;
             SPWeb rootWeb = web.Site.RootWeb;
-
+            
             web.MasterUrl = rootWeb.MasterUrl;
-            web.CustomMasterUrl = rootWeb.CustomMasterUrl; 
-            web.AlternateCssUrl = rootWeb.AlternateCssUrl;
-            web.SiteLogoUrl = rootWeb.SiteLogoUrl;
-            web.Update(); 
+            //web.CustomMasterUrl = rootWeb.CustomMasterUrl; 
+            //web.AlternateCssUrl = rootWeb.AlternateCssUrl;
+            //web.SiteLogoUrl = rootWeb.SiteLogoUrl;
+            web.Update();
         }
     }
 }
