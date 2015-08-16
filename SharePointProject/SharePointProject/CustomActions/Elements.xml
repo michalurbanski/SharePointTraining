@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CustomMenuControl"
+                GroupId="SiteActions" 
+                Location="Microsoft.SharePoint.StandardMenu"
+                Sequence="1"
+                ControlAssembly="$SharePoint.Project.AssemblyFullName$"
+                ControlClass="SharePointProject.CustomControls.CustomMenuControl"
+                Title="Custom menu demo"
+                Description="Custom controls menu demo"
+                />
+</Elements>
